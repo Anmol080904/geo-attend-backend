@@ -13,8 +13,6 @@ from django.core.mail import send_mail
 from .models import Employee, Location, AttendanceRecord, LeaveApplication
 from .utils import is_within_geofence, calculate_leave_days, auto_approve_leave
 import hmac
-import hashlib
-import base64
 import time
 import qrcode
 from django.http import HttpResponse
