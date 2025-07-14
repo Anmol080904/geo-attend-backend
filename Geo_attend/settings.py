@@ -153,3 +153,18 @@ import os
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+INSTALLED_APPS += ['corsheaders']
+
+MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    ...
+]
+
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOWED_ORIGINS = [
+    "https://geo-attend-front.onrender.com",  # your frontend domain
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://geo-attend-front.onrender.com",
+]
